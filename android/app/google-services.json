@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "1038703938001",
+    "firebase_url": "https://shopapp-e6876.firebaseio.com",
+    "project_id": "shopapp-e6876",
+    "storage_bucket": "shopapp-e6876.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038703938001:android:f244a33b17743ac2",
+        "android_client_info": {
+          "package_name": "br.com.pixeltech.shopapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038703938001-ehqsmb9skks2ks2psgkikioohmbni2vt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq5s6OZds_8LWtEL_1jmyVZxHslRKG3ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038703938001-ehqsmb9skks2ks2psgkikioohmbni2vt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1038703938001-0nf0nvp1noq8o0mb959m852ifkqmu24n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.pixeltech.shopapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038703938001:android:5b6cc5636ec60e3a0a78f0",
+        "android_client_info": {
+          "package_name": "br.com.pixeltech.shopappadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038703938001-ehqsmb9skks2ks2psgkikioohmbni2vt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq5s6OZds_8LWtEL_1jmyVZxHslRKG3ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038703938001-ehqsmb9skks2ks2psgkikioohmbni2vt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1038703938001-0nf0nvp1noq8o0mb959m852ifkqmu24n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.pixeltech.shopapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
