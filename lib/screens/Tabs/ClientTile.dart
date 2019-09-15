@@ -11,7 +11,7 @@ class ClientTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // if(client.containsKey('money')){
+    if(client.containsKey('money')){
       return ListTile(
         title: Text(client['name'], style: textStyle,),
         subtitle: Text(client['email'], style: textStyle,),
@@ -24,21 +24,21 @@ class ClientTile extends StatelessWidget {
           ],
         ),
       );
-    // } else {
-    //   return Container(
-    //     margin: EdgeInsets.all(10),
-    //     child: SizedBox(
-    //       width: 200.0,
-    //       height: 20.0,
-    //       child: Shimmer.fromColors(
-    //         baseColor: Colors.white,
-    //         highlightColor: Colors.grey,
-    //         child: Container(
-    //           color: Colors.white.withAlpha(80)
-    //         ),
-    //       ),
-    //     )
-    //   );
-    // }
+    } else {
+      return Container(
+        margin: EdgeInsets.all(10),
+        child: SizedBox(
+          width: 200.0,
+          height: 20.0,
+          child: Shimmer.fromColors(
+            baseColor: Colors.white,
+            highlightColor: Colors.grey,
+            child: Container(
+              color: Colors.white.withAlpha(80)
+            ),
+          ),
+        )
+      );
+    }
 }
 }
