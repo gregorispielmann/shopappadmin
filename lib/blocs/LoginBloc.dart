@@ -37,7 +37,6 @@ class LoginBloc extends BlocBase with LoginValidators {
           _stateController.add(LoginState.SUCCESS);
         } else {
           FirebaseAuth.instance.signOut();
-          print(_stateController);
           _stateController.add(LoginState.FAIL);
         }
       } else {

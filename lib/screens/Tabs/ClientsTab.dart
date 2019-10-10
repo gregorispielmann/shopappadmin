@@ -23,6 +23,7 @@ class ClientsTab extends StatelessWidget {
                 icon: Icon(Icons.search, color: Colors.white,),
                 border: InputBorder.none
               ),
+              onChanged: _clientBloc.onChangedSearch,
             ),
           ),
           Expanded(
@@ -32,7 +33,7 @@ class ClientsTab extends StatelessWidget {
                 if(!snapshot.hasData){
                   return Center(child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation(Colors.pink),),);
                 } else if (snapshot.data.length == 0){
-                  return Center(child: Text('Nenhum usuário encontrado!'),);
+                  return Center(child: Text('Nenhum usuário encontrado!', style: TextStyle(color: Colors.white),),);
                 } else {
                   return ListView.separated(
                     itemBuilder: (context, index){

@@ -47,7 +47,6 @@ class _LoginScreenState extends State<LoginScreen> {
       initialData: LoginState.LOADING,
       builder: (context, snapshot){
 
-        print(snapshot.data);
         switch(snapshot.data){
           case LoginState.LOADING:
             return Center(child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation(Colors.pink),),);

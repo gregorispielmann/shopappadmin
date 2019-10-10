@@ -16,6 +16,26 @@ class ClientsBloc extends BlocBase {
     _addClientsListener();
 
   }
+
+  Map<String, dynamic> getClient(uid){
+    return _clients[uid];
+  }
+
+  void onChangedSearch(search){
+    if(search.trim().isEmpty){
+      _clientsController.add(_clients.values.toList());
+    } else {
+      _clientsController.add(_filter(search.trim()));
+    }
+  }
+
+  _filter(search){
+    List<Map<String, dynamic>> filteredClients = List.from(_clients.values.toList());  
+    filteredClients.retainWhere((data){
+      return data['name'].toUpperCase().contains(search.toUpperCase());
+    });
+    return filteredClients;
+  }
   
   void _addClientsListener(){
     _firestore.collection('users').snapshots().listen((onData){
@@ -44,12 +64,13 @@ class ClientsBloc extends BlocBase {
   void _subscribeToOrders(uid){
 
     _clients[uid]["subscription"] = _firestore.collection('users').document(uid).collection('orders').snapshots().listen((orders) async {
+
       int numOrders = orders.documents.length;
       double money = 0.0;
 
       for(DocumentSnapshot d in orders.documents){
         
-        DocumentSnapshot order = await _firestore.document(d.documentID).get();
+        DocumentSnapshot order = await _firestore.collection('orders').document(d.documentID).get();
 
         if(order.data == null) continue;
         money += order.data['totalPrice'];
@@ -71,7 +92,6 @@ class ClientsBloc extends BlocBase {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _clientsController.close();
   }
 
